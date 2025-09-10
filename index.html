@@ -1,194 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Mohammed Hussain Shareef - DevOps Engineer</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <title>Mohammed Hussain Shareef - DevOps Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,600&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0; padding: 0;
-      font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
-      background: linear-gradient(135deg, #23242f 0%, #7b7e98 100%);
-      color: #f1f3f7;
-      min-height: 100vh;
+    :root {
+      --color-primary: #3a84ff;
+      --color-secondary: #1f2937;
+      --color-light: #f9fafb;
+      --color-dark: #111827;
+      --color-accent: #10b981;
+      --shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+      --border-radius: 8px;
     }
-    #container {
-      max-width: 970px;
-      margin: 48px auto 32px;
-      background: rgba(34,36,47,0.96);
-      box-shadow: 0 10px 36px 0 rgba(0,0,0,0.28),0 1.5px 5.58px 0 rgba(30,40,98,0.82);
-      border-radius: 18px;
-      padding: 40px 44px 32px 44px;
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: var(--color-light);
+      color: var(--color-dark);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: var(--color-secondary);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      margin: 0;
+      font-weight: 600;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+    header p {
+      margin: 6px 0 0;
+      font-weight: 300;
+      font-size: 1.1rem;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem 3rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    h2 {
+      font-weight: 600;
+      color: var(--color-primary);
+      border-bottom: 3px solid var(--color-accent);
+      padding-bottom: 6px;
+      margin-bottom: 1.5rem;
+      font-size: 1.8rem;
+    }
+
+    .intro {
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--color-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .skills-list, .projects-list, .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .skills-list li, .contact-list li {
+      background: var(--color-primary);
+      color: white;
+      padding: 0.5rem 1rem;
+      font-weight: 600;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+      font-size: 1rem;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .project-card {
+      background: white;
+      box-shadow: var(--shadow);
+      border-radius: var(--border-radius);
+      padding: 1rem 1.5rem;
+      width: 100%;
+      max-width: 500px;
       transition: box-shadow 0.3s;
     }
-    h1 {
-      font-family: 'Montserrat', Arial, sans-serif;
-      font-size: 2.8em; color: #7ec2fd; margin-bottom: 8px; letter-spacing: 0.03em;
+    .project-card:hover {
+      box-shadow: 0 8px 32px rgba(58, 132, 255, 0.35);
     }
-    h2 {
-      color: #ffe082; font-size:1.45em; margin-top:32px; margin-bottom: 14px;
-      padding-bottom: 4px; border-bottom: 2px solid #273652; font-family: 'Montserrat', Arial, sans-serif;
-      letter-spacing: 0.03em;
+    .project-title {
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin: 0 0 0.7rem 0;
+      color: var(--color-secondary);
     }
-    ul {margin-top:0; padding-left: 24px;}
-    .section {margin-bottom: 36px;}
-    .subhead {
-      color: #b4bbda; font-size: 1.12em; margin-bottom: 6px; font-family: 'Montserrat', Arial, sans-serif;
+    .project-desc {
+      font-size: 1rem;
+      color: #555;
+      margin: 0 0 1rem 0;
     }
-    .exp, .proj {margin-top: 12px;}
-    .exp-title {font-weight:600; color:#6fc2b6;}
-    .role {font-style:italic; color:#ffe082;}
-    .skills {
-      display: flex; flex-wrap: wrap; gap:10px; margin-top:8px;
+    .project-tech {
+      font-weight: 600;
+      color: var(--color-accent);
+      font-size: 0.95rem;
     }
-    .skill-chip {
-      background: linear-gradient(90deg, #334b7e 0%, #27516e 100%);
-      color: #efe4ff; padding: 6px 18px; border-radius: 18px; font-size:1em;
-      font-family: 'Montserrat', Arial, sans-serif; box-shadow:0 2px 6px rgba(20,34,109,0.09);
+
+    .projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
     }
-    .exp-list, .proj-list {margin-top:7px;}
-    .exp-date { font-size:0.95em; color:#beacf4; margin-left:8px; }
-    a { color: #7ec2fd; text-decoration:none; }
-    a:hover {color: #ffe082; text-decoration:underline;}
-    .contact-list li {margin-top: 5px;}
-    .footer {
-      text-align: center; margin-top:44px; font-size:1em; color:#8acadb; opacity:.67;
+
+    footer {
+      background: var(--color-secondary);
+      color: white;
+      text-align: center;
+      font-size: 0.85rem;
+      padding: 1rem;
     }
-    @media (max-width: 700px) {
-      #container {padding: 14px;}
-      h1 {font-size: 2em;}
+
+    @media (max-width: 600px) {
+      .skills-list, .projects-container, .contact-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .project-card {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="container">
+  <header>
     <h1>Mohammed Hussain Shareef</h1>
-    <div class="subhead">DevOps Engineer | 6.3 Years Total Exp | <a href="mailto:mohammedhussainshareef68@gmail.com">mohammedhussainshareef68@gmail.com</a> | (+91)-7013040690</div>
+    <p>DevOps Engineer | Cloud & Kubernetes Enthusiast</p>
+  </header>
 
-    <div class="section">
-      <h2>Professional Summary</h2>
-      <p>
-        Accomplished and results-oriented DevOps Engineer with 6+ years of experience in IT, including extensive hands-on expertise in automation, cloud infrastructure, containerization, and CI/CD pipelines. Passionate about building robust architectures, optimizing deployments, and supporting mission-critical applications across AWS, Azure, and Kubernetes platforms.
+  <main>
+    <section class="intro-section">
+      <p class="intro">
+        Experienced DevOps Engineer with over 6 years in IT and 4 years dedicated to cloud infrastructure, automation, and CI/CD pipeline development. Skilled in Kubernetes, AWS, Azure, Docker, Terraform, and Jenkins. Passionate about building scalable, reliable systems and driving business value through technology automation.
       </p>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
       <h2>Technical Skills</h2>
-      <div class="skills">
-        <span class="skill-chip">Jenkins</span>
-        <span class="skill-chip">Maven</span>
-        <span class="skill-chip">NodeJS</span>
-        <span class="skill-chip">EKS</span>
-        <span class="skill-chip">Kubernetes</span>
-        <span class="skill-chip">k3d</span>
-        <span class="skill-chip">Git/GitHub</span>
-        <span class="skill-chip">Ansible</span>
-        <span class="skill-chip">Terraform</span>
-        <span class="skill-chip">Docker</span>
-        <span class="skill-chip">JIRA</span>
-        <span class="skill-chip">Bug Tracker</span>
-        <span class="skill-chip">Nexus</span>
-        <span class="skill-chip">AWS Artifact</span>
-        <span class="skill-chip">Prometheus</span>
-        <span class="skill-chip">Grafana</span>
-        <span class="skill-chip">SonarQube</span>
-        <span class="skill-chip">Linux (RedHat, Centos, SUSE, Ubuntu, Oracle)</span>
-        <span class="skill-chip">Windows</span>
-        <span class="skill-chip">AWS</span>
-        <span class="skill-chip">Azure</span>
-        <span class="skill-chip">Shell</span>
-        <span class="skill-chip">Python</span>
-        <span class="skill-chip">Groovy</span>
-        <span class="skill-chip">YAML</span>
-        <span class="skill-chip">HCL</span>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Work Experience</h2>
-      <div class="exp">
-        <div><span class="exp-title">XTGlobal Infotech Limited</span><span class="exp-date">Dec 2023 - Present</span></div>
-        <div class="role">DevOps Engineer</div>
-        <ul class="exp-list">
-          <li>Deployment to AWS EKS (Elastic Kubernetes Service)</li>
-          <li>Cloud infrastructure management on AWS</li>
-          <li>CI/CD pipeline development and automation</li>
-          <li>Containerization with Docker; image and file orchestration</li>
-          <li>Tool integration (Nexus, SonarQube, GitHub)</li>
-          <li>Application build management via Maven</li>
-          <li>Security checks using OWASP Dependency</li>
-          <li>Infrastructure provisioning using Terraform</li>
-          <li>Monitoring via Grafana, Prometheus</li>
-        </ul>
-      </div>
-      <div class="exp">
-        <div><span class="exp-title">TCS | Dentsu (Advertising, AWS Cloud)</span><span class="exp-date">Jul 2022 – Oct 2023</span></div>
-        <div class="role">DevOps Engineer</div>
-        <ul class="exp-list">
-          <li>Designed CI/CD pipelines in Jenkins</li>
-          <li>Managed deployments to EKS and Azure</li>
-          <li>Resource provisioning via Terraform</li>
-          <li>Artifact lifecycle management with AWS Artifacts</li>
-          <li>Linux EC2 agent configuration for CI/CD</li>
-        </ul>
-      </div>
-      <div class="exp">
-        <div><span class="exp-title">Capgemini (Tobacco Ltd & GHO, AWS & Azure)</span><span class="exp-date">Apr 2018 – Jul 2022</span></div>
-        <div class="role">Cloud Engineer / DevOps</div>
-        <ul class="exp-list">
-          <li>Jenkins-based CI/CD pipeline and deployments</li>
-          <li>Infrastructure management in AWS and Azure</li>
-          <li>Resource provisioning with Terraform</li>
-          <li>Monitoring and troubleshooting cloud operations</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Major Projects</h2>
-      <div class="proj">
-        <div class="exp-title">Circulus Operations (XTGlobal)</div>
-        <ul class="proj-list">
-          <li>Jenkins CI/CD, Helm-based Kubernetes deployments, Grafana dashboards</li>
-          <li>End-to-end tool-chain integration for code quality & artifact management</li>
-        </ul>
-      </div>
-      <div class="proj">
-        <div class="exp-title">Dentsu Automation (TCS)</div>
-        <ul class="proj-list">
-          <li>EKS cluster provisioning via Terraform, automated build & release workflows</li>
-        </ul>
-      </div>
-      <div class="proj">
-        <div class="exp-title">Tobacco Ltd & GHO (Capgemini)</div>
-        <ul class="proj-list">
-          <li>Jenkins CI/CD, Azure/AWS infrastructure automation, cloud monitoring</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="section">
-      <h2>Education</h2>
-      <ul>
-        <li>B.Tech, Aditya Engineering College, Surampalem, A.P <span class="exp-date">2011-2015</span></li>
-        <li>12th, Vignan Junior College <span class="exp-date">2010</span></li>
-        <li>10th, Vignan Residential High School <span class="exp-date">2008</span></li>
+      <ul class="skills-list">
+        <li>Jenkins</li>
+        <li>Maven</li>
+        <li>NodeJS</li>
+        <li>EKS</li>
+        <li>Kubernetes</li>
+        <li>k3d</li>
+        <li>Git/GitHub</li>
+        <li>Ansible</li>
+        <li>Terraform</li>
+        <li>Docker</li>
+        <li>Prometheus</li>
+        <li>Grafana</li>
+        <li>SonarQube</li>
+        <li>AWS</li>
+        <li>Azure</li>
+        <li>Linux (RHEL, CentOS, Ubuntu)</li>
+        <li>Shell scripting</li>
+        <li>Python</li>
+        <li>Groovy</li>
+        <li>YAML, HCL</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="section">
+    <section>
+      <h2>Projects</h2>
+      <div class="projects-container">
+        <div class="project-card">
+          <div class="project-title">Circulus Operations (XTGlobal)</div>
+          <p class="project-desc">Developed Jenkins CI/CD pipelines leveraging Helm for Kubernetes deployments, integrated SonarQube for code quality checks, and Grafana for monitoring dashboards.</p>
+          <div class="project-tech">Tools: Jenkins, Helm, Kubernetes, Grafana, SonarQube</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Dentsu Automation (TCS)</div>
+          <p class="project-desc">Provisioned EKS clusters with Terraform, configured automated artifact builds and deployments using AWS DevOps tools.</p>
+          <div class="project-tech">Tools: EKS, Terraform, AWS DevOps, Jenkins</div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-title">Tobacco Ltd & GHO Cloud Infrastructure (Capgemini)</div>
+          <p class="project-desc">Managed end-to-end CI/CD pipelines and automated cloud resources on Azure and AWS platforms, including monitoring and VM provisioning.</p>
+          <div class="project-tech">Tools: Jenkins, Azure DevOps, Terraform, AWS, Azure</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
       <h2>Contact</h2>
       <ul class="contact-list">
         <li>Email: <a href="mailto:mohammedhussainshareef68@gmail.com">mohammedhussainshareef68@gmail.com</a></li>
         <li>Phone: (+91)-7013040690</li>
         <li>Location: India</li>
       </ul>
-    </div>
+    </section>
+  </main>
 
-    <div class="footer">
-      &copy; 2025 Mohammed Hussain Shareef. All rights reserved.
-    </div>
-  </div>
+  <footer>
+    &copy; 2025 Mohammed Hussain Shareef. All rights reserved.
+  </footer>
 </body>
 </html>
