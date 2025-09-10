@@ -4,135 +4,166 @@
   <meta charset="UTF-8">
   <title>Mohammed Hussain Shareef - DevOps Engineer</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Roboto:400,500&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Segoe UI', Verdana, Arial, sans-serif; margin: 0; background: #f8f9fa; color: #222;}
-    #container { max-width: 900px; margin: 32px auto; background: #fff; box-shadow: 0 0 12px #ccc; padding: 32px; border-radius: 8px;}
-    h1, h2 { color: #2636ab; margin-bottom: 0; }
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 1.5em; border-bottom: 1px solid #eef; padding-bottom: 2px;}
-    ul { margin: 0; padding-left: 16px;}
-    .section { margin-bottom: 32px;}
-    .small { font-size:0.99em; color: #666;}
-    .exp, .proj { margin-top: 12px;}
-    .exp-title { font-weight: 600; color: #05668d;}
-    .role { font-style: italic;}
-    .skills span { background: #e3ebf7; margin:2px 5px; padding:2px 9px; border-radius:8px;}
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Roboto', 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(135deg, #23242f 0%, #7b7e98 100%);
+      color: #f1f3f7;
+      min-height: 100vh;
+    }
+    #container {
+      max-width: 970px;
+      margin: 48px auto 32px;
+      background: rgba(34,36,47,0.96);
+      box-shadow: 0 10px 36px 0 rgba(0,0,0,0.28),0 1.5px 5.58px 0 rgba(30,40,98,0.82);
+      border-radius: 18px;
+      padding: 40px 44px 32px 44px;
+      transition: box-shadow 0.3s;
+    }
+    h1 {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.8em; color: #7ec2fd; margin-bottom: 8px; letter-spacing: 0.03em;
+    }
+    h2 {
+      color: #ffe082; font-size:1.45em; margin-top:32px; margin-bottom: 14px;
+      padding-bottom: 4px; border-bottom: 2px solid #273652; font-family: 'Montserrat', Arial, sans-serif;
+      letter-spacing: 0.03em;
+    }
+    ul {margin-top:0; padding-left: 24px;}
+    .section {margin-bottom: 36px;}
+    .subhead {
+      color: #b4bbda; font-size: 1.12em; margin-bottom: 6px; font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .exp, .proj {margin-top: 12px;}
+    .exp-title {font-weight:600; color:#6fc2b6;}
+    .role {font-style:italic; color:#ffe082;}
+    .skills {
+      display: flex; flex-wrap: wrap; gap:10px; margin-top:8px;
+    }
+    .skill-chip {
+      background: linear-gradient(90deg, #334b7e 0%, #27516e 100%);
+      color: #efe4ff; padding: 6px 18px; border-radius: 18px; font-size:1em;
+      font-family: 'Montserrat', Arial, sans-serif; box-shadow:0 2px 6px rgba(20,34,109,0.09);
+    }
+    .exp-list, .proj-list {margin-top:7px;}
+    .exp-date { font-size:0.95em; color:#beacf4; margin-left:8px; }
+    a { color: #7ec2fd; text-decoration:none; }
+    a:hover {color: #ffe082; text-decoration:underline;}
+    .contact-list li {margin-top: 5px;}
+    .footer {
+      text-align: center; margin-top:44px; font-size:1em; color:#8acadb; opacity:.67;
+    }
+    @media (max-width: 700px) {
+      #container {padding: 14px;}
+      h1 {font-size: 2em;}
+    }
   </style>
 </head>
 <body>
   <div id="container">
     <h1>Mohammed Hussain Shareef</h1>
-    <div class="section">
-      <span><b>DevOps Engineer</b> | Total Exp: 6.3 Years | Relevant: 4 Years <br>
-      <b>Ph:</b> (+91)-7013040690 |
-      <b>Email:</b> <a href="mailto:mohammedhussainshareef68@gmail.com">mohammedhussainshareef68@gmail.com</a>
-      </span>
-    </div>
+    <div class="subhead">DevOps Engineer | 6.3 Years Total Exp | <a href="mailto:mohammedhussainshareef68@gmail.com">mohammedhussainshareef68@gmail.com</a> | (+91)-7013040690</div>
 
     <div class="section">
       <h2>Professional Summary</h2>
-      <p>An accomplished and result-oriented professional with 6+ years in IT, including 4+ years as a DevOps Engineer supporting, automating, and optimizing mission-critical deployments in production server and cloud environments. Skilled in build, deployment, source code management, configuration management, CI/CD, and DevOps best practices.</p>
+      <p>
+        Accomplished and results-oriented DevOps Engineer with 6+ years of experience in IT, including extensive hands-on expertise in automation, cloud infrastructure, containerization, and CI/CD pipelines. Passionate about building robust architectures, optimizing deployments, and supporting mission-critical applications across AWS, Azure, and Kubernetes platforms.
+      </p>
     </div>
 
     <div class="section">
       <h2>Technical Skills</h2>
       <div class="skills">
-        <span>Jenkins</span>
-        <span>Maven</span>
-        <span>NodeJS</span>
-        <span>EKS</span>
-        <span>Kubernetes</span>
-        <span>k3d</span>
-        <span>Git/GitHub</span>
-        <span>Ansible</span>
-        <span>Terraform</span>
-        <span>Docker</span>
-        <span>JIRA</span>
-        <span>Bug Tracker</span>
-        <span>Nexus</span>
-        <span>AWS Artifact</span>
-        <span>Prometheus</span>
-        <span>Grafana</span>
-        <span>SonarQube</span>
-        <span>Windows</span>
-        <span>Linux (RedHat, Centos, SUSE, Debian, Ubuntu, Oracle)</span>
-        <span>AWS</span>
-        <span>Azure</span>
-        <span>Shell</span>
-        <span>Python</span>
-        <span>Groovy</span>
-        <span>YAML</span>
-        <span>HCL</span>
-        <span>TCP/IP</span>
-        <span>NFS</span>
-        <span>Telnet</span>
-        <span>FTP</span>
-        <span>DNS</span>
-        <span>HTTP/S</span>
-        <span>SMB</span>
-        <span>SMTP</span>
+        <span class="skill-chip">Jenkins</span>
+        <span class="skill-chip">Maven</span>
+        <span class="skill-chip">NodeJS</span>
+        <span class="skill-chip">EKS</span>
+        <span class="skill-chip">Kubernetes</span>
+        <span class="skill-chip">k3d</span>
+        <span class="skill-chip">Git/GitHub</span>
+        <span class="skill-chip">Ansible</span>
+        <span class="skill-chip">Terraform</span>
+        <span class="skill-chip">Docker</span>
+        <span class="skill-chip">JIRA</span>
+        <span class="skill-chip">Bug Tracker</span>
+        <span class="skill-chip">Nexus</span>
+        <span class="skill-chip">AWS Artifact</span>
+        <span class="skill-chip">Prometheus</span>
+        <span class="skill-chip">Grafana</span>
+        <span class="skill-chip">SonarQube</span>
+        <span class="skill-chip">Linux (RedHat, Centos, SUSE, Ubuntu, Oracle)</span>
+        <span class="skill-chip">Windows</span>
+        <span class="skill-chip">AWS</span>
+        <span class="skill-chip">Azure</span>
+        <span class="skill-chip">Shell</span>
+        <span class="skill-chip">Python</span>
+        <span class="skill-chip">Groovy</span>
+        <span class="skill-chip">YAML</span>
+        <span class="skill-chip">HCL</span>
       </div>
     </div>
 
     <div class="section">
       <h2>Work Experience</h2>
       <div class="exp">
-        <span class="exp-title">XTGlobal Infotech Limited</span> <span class="small">Dec 2023 - Present</span><br>
-        <span class="role">DevOps Engineer</span>
-        <ul>
-          <li>Deployment to EKS (Elastic Kubernetes Service)</li>
-          <li>AWS infrastructure management</li>
-          <li>CI/CD & pipeline creation</li>
-          <li>Docker file and image management</li>
-          <li>Tool integrations: Nexus, SonarQube, Git</li>
-          <li>Maven build management</li>
-          <li>Security checks with OWASP Dependency</li>
-          <li>Helm chart deployments</li>
-          <li>Terraform for Infrastructure provisioning</li>
+        <div><span class="exp-title">XTGlobal Infotech Limited</span><span class="exp-date">Dec 2023 - Present</span></div>
+        <div class="role">DevOps Engineer</div>
+        <ul class="exp-list">
+          <li>Deployment to AWS EKS (Elastic Kubernetes Service)</li>
+          <li>Cloud infrastructure management on AWS</li>
+          <li>CI/CD pipeline development and automation</li>
+          <li>Containerization with Docker; image and file orchestration</li>
+          <li>Tool integration (Nexus, SonarQube, GitHub)</li>
+          <li>Application build management via Maven</li>
+          <li>Security checks using OWASP Dependency</li>
+          <li>Infrastructure provisioning using Terraform</li>
+          <li>Monitoring via Grafana, Prometheus</li>
         </ul>
       </div>
       <div class="exp">
-        <span class="exp-title">TCS, Project: Dentsu</span> <span class="small">Jul 2022 – Oct 2023</span><br>
-        <span class="role">DevOps Engineer</span>
-        <ul>
-          <li>Jenkins pipeline creation</li>
-          <li>EKS & Azure Infra Management</li>
-          <li>Terraform provisioning</li>
-          <li>EC2/VM agent addition for CI/CD</li>
+        <div><span class="exp-title">TCS | Dentsu (Advertising, AWS Cloud)</span><span class="exp-date">Jul 2022 – Oct 2023</span></div>
+        <div class="role">DevOps Engineer</div>
+        <ul class="exp-list">
+          <li>Designed CI/CD pipelines in Jenkins</li>
+          <li>Managed deployments to EKS and Azure</li>
+          <li>Resource provisioning via Terraform</li>
+          <li>Artifact lifecycle management with AWS Artifacts</li>
+          <li>Linux EC2 agent configuration for CI/CD</li>
         </ul>
       </div>
       <div class="exp">
-        <span class="exp-title">Capgemini - Tobacco Ltd & GHO</span> <span class="small">Apr 2018 – Jul 2022</span><br>
-        <span class="role">Cloud Engineer with DevOps Tools</span>
-        <ul>
-          <li>CI/CD pipeline setup on Jenkins</li>
-          <li>Azure & AWS Infra Management</li>
-          <li>Science Logic monitoring</li>
+        <div><span class="exp-title">Capgemini (Tobacco Ltd & GHO, AWS & Azure)</span><span class="exp-date">Apr 2018 – Jul 2022</span></div>
+        <div class="role">Cloud Engineer / DevOps</div>
+        <ul class="exp-list">
+          <li>Jenkins-based CI/CD pipeline and deployments</li>
+          <li>Infrastructure management in AWS and Azure</li>
+          <li>Resource provisioning with Terraform</li>
+          <li>Monitoring and troubleshooting cloud operations</li>
         </ul>
       </div>
     </div>
 
     <div class="section">
-      <h2>Notable Projects</h2>
+      <h2>Major Projects</h2>
       <div class="proj">
-        <b>Circulus Operations (XTGlobal)</b>
-        <ul>
-          <li>Setup Jenkins CI/CD pipeline, Helm-based Kubernetes deployments, Grafana dashboards</li>
-          <li>Integrated tool-chain for code quality & artifact management</li>
+        <div class="exp-title">Circulus Operations (XTGlobal)</div>
+        <ul class="proj-list">
+          <li>Jenkins CI/CD, Helm-based Kubernetes deployments, Grafana dashboards</li>
+          <li>End-to-end tool-chain integration for code quality & artifact management</li>
         </ul>
       </div>
       <div class="proj">
-        <b>Dentsu Automation (TCS)</b>
-        <ul>
-          <li>EKS cluster provisioning via Terraform</li>
-          <li>Automated artifact and build management with AWS DevOps</li>
+        <div class="exp-title">Dentsu Automation (TCS)</div>
+        <ul class="proj-list">
+          <li>EKS cluster provisioning via Terraform, automated build & release workflows</li>
         </ul>
       </div>
       <div class="proj">
-        <b>Tobacco Ltd & GHO (Capgemini)</b>
-        <ul>
-          <li>Jenkins CI/CD & Infrastructure on Azure/AWS</li>
-          <li>Integrated Science Logic monitoring and Azure VM management</li>
+        <div class="exp-title">Tobacco Ltd & GHO (Capgemini)</div>
+        <ul class="proj-list">
+          <li>Jenkins CI/CD, Azure/AWS infrastructure automation, cloud monitoring</li>
         </ul>
       </div>
     </div>
@@ -140,19 +171,23 @@
     <div class="section">
       <h2>Education</h2>
       <ul>
-        <li>B.Tech, Aditya Engineering College, Surampalem, A.P (2011-2015)</li>
-        <li>12th, Vignan Junior College (2010)</li>
-        <li>10th, Vignan Residential High School (2008)</li>
+        <li>B.Tech, Aditya Engineering College, Surampalem, A.P <span class="exp-date">2011-2015</span></li>
+        <li>12th, Vignan Junior College <span class="exp-date">2010</span></li>
+        <li>10th, Vignan Residential High School <span class="exp-date">2008</span></li>
       </ul>
     </div>
 
     <div class="section">
       <h2>Contact</h2>
-      <ul>
+      <ul class="contact-list">
         <li>Email: <a href="mailto:mohammedhussainshareef68@gmail.com">mohammedhussainshareef68@gmail.com</a></li>
         <li>Phone: (+91)-7013040690</li>
         <li>Location: India</li>
       </ul>
+    </div>
+
+    <div class="footer">
+      &copy; 2025 Mohammed Hussain Shareef. All rights reserved.
     </div>
   </div>
 </body>
